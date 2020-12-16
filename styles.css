@@ -42,9 +42,13 @@ section h2 {
 
 .white-box {
   background-color: rgba(225, 225, 225, .9);
+}
+
+.white-box.dishes {
   float: left;
-  padding: 50px 140px 50px 40px;
-  margin: 50px 70px;
+  margin: 50px 75px;
+  width: 510px;
+  height: 410px;
 }
 
 /* radiobuttons on separate lines */
@@ -53,13 +57,13 @@ section h2 {
   display: block;
 }
 
-/*  */
+/* radio button labels */
 .dish-type {
   font-size: 18px;
   vertical-align: middle;
   padding: 5px;
 }
-
+/* Lets cook button */
 .lets-cook {
   background-color: #0fb9b1;
   width: 200px;
@@ -68,5 +72,20 @@ section h2 {
   border-radius: 5px;
   padding: 8px;
   margin: 10px 10px;
+}
+
+/* -------Recipe Box------------- */
+
+
+.white-box.recipe {
+  float: left;
+  margin: 50px 100px;
+  width: 510px;
+  height: 410px;
+}
+
+.pot-img {
+  height: 120px;
+  width: 120px;
 
 }
