@@ -32,7 +32,7 @@ function displayRandomDish() {
 }
 
 function displayDish() {
-  imgCookPot.classList.toggle("hidden");
-  randomDishIntro.classList.toggle("hidden");
-  randomDishText.innerText = `${randomDish}`
+  imgCookPot.classList.add("hidden");
+  randomDishIntro.classList.remove("hidden");
+  randomDishText.innerText = `${randomDish}!`
 }
