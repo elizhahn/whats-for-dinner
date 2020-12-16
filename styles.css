@@ -78,7 +78,7 @@ section h2 {
 /* -------Recipe Box------------- */
 
 
-.white-box.recipe {
+.white-box.dish-idea {
   float: left;
   margin: 55px 100px;
   padding: 140px 190px;
@@ -87,5 +87,17 @@ section h2 {
 .pot-img {
   height: 130px;
   width: 130px;
+
+}
+
+/* ------------Hidden dish idea box-------- */
+
+.dish-idea {
+  float: left;
+  margin: 55px 100px;
+  padding: 140px 190px;
+}
+
+.random-dish {
 
 }
