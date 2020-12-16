@@ -36,6 +36,12 @@ header h1 {
 
 /* ---------Dish selection box------- */
 
+/* need to get the asterisk up higher */
+section h2::after {
+  content: "*";
+  color: red;
+}
+
 section h2 {
   font-size: 30px;
 }
