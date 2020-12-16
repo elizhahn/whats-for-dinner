@@ -46,9 +46,10 @@ section h2 {
 
 .white-box.dishes {
   float: left;
-  margin: 50px 75px;
-  width: 510px;
-  height: 410px;
+  width: 480px;
+  height: 360px;
+  margin: 55px 75px;
+  padding:50px 0px 0px 40px;
 }
 
 /* radiobuttons on separate lines */
@@ -79,13 +80,12 @@ section h2 {
 
 .white-box.recipe {
   float: left;
-  margin: 50px 100px;
-  width: 510px;
-  height: 410px;
+  margin: 55px 100px;
+  padding: 140px 190px;
 }
 
 .pot-img {
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
 
 }
