@@ -10,7 +10,7 @@ var sides = [
 "Garlic Butter Mushrooms",
 "Hush Puppies"];
 
-var mains = [
+var mainDishes = [
 "Spaghetti and Meatballs",
 "Pineapple Chicken",
 "Shakshuka",
@@ -42,5 +42,5 @@ var mains = [
 "Pumpkin Pie",
 "Key Lime Pie",
 "Tart Tatin",
-"Croissants,"
+"Croissants",
 "Eclairs"]
