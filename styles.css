@@ -42,12 +42,12 @@ section h2 {
 
 .white-box {
   background-color: rgba(225, 225, 225, .9);
-}
-
-.white-box.dishes {
   float: left;
   width: 480px;
   height: 360px;
+}
+
+.white-box.dishes {
   margin: 55px 75px;
   padding:50px 0px 0px 40px;
 }
@@ -79,9 +79,8 @@ section h2 {
 
 
 .white-box.pot-img {
-  float: left;
   margin: 55px 100px;
-  padding: 140px 190px;
+  padding: 140px 185px;
 }
 
 .pot-img {
