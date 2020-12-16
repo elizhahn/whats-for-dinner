@@ -1,9 +1,10 @@
 var inputDishes = document.querySelectorAll("input[name='dish']");
 var btnLetsCook = document.querySelector(".lets-cook");
 var imgCookPot = document.querySelector("svg");
-
+var randomDishText = document.querySelector("p");
 var randomDish;
-btnLetsCook.addEventListener("click", randomDish);
+
+btnLetsCook.addEventListener("click", displayRandomDish);
 
 //retrieves random array index
 function randomIndex(array) {
@@ -11,7 +12,7 @@ function randomIndex(array) {
 }
 
 //generates a random dish based on user input
-function randomDish() {
+function displayRandomDish() {
   var userChoice;
   for(var i = 0; i < inputDishes.length; i++) {
     if(inputDishes[i].checked) {
@@ -31,4 +32,5 @@ function randomDish() {
 
 function displayDish() {
   imgCookPot.classList.add("hidden");
+  randomDishText.classList.remove("hidden");
 }
