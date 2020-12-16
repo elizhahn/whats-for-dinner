@@ -1,7 +1,8 @@
 var inputDishes = document.querySelectorAll("input[name='dish']");
 var btnLetsCook = document.querySelector(".lets-cook");
 var imgCookPot = document.querySelector("svg");
-var randomDishText = document.querySelector("p");
+var randomDishIntro = document.querySelector("p");
+var randomDishText = document.querySelector(".random-dish");
 var randomDish;
 
 btnLetsCook.addEventListener("click", displayRandomDish);
@@ -31,6 +32,7 @@ function displayRandomDish() {
 }
 
 function displayDish() {
-  imgCookPot.classList.add("hidden");
-  randomDishText.classList.remove("hidden");
+  imgCookPot.classList.toggle("hidden");
+  randomDishIntro.classList.toggle("hidden");
+  randomDishText.innerText = `${randomDish}`
 }
