@@ -92,6 +92,15 @@ section h2 {
 
 /* ------------Hidden dish idea-------- */
 
+p {
+  font-style: italic;
+  font-size: 18px;
+}
+
 .random-dish {
-  
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }
