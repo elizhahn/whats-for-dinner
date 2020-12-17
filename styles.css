@@ -9,11 +9,8 @@ red - #ee5253
 */
 /* add important */
 
-p.hidden {
-  display: none;
-}
-
-.hidden.pot-img {
+ 
+.hidden.pot-img, p.hidden {
   display: none;
 }
 
@@ -37,6 +34,7 @@ header {
 header h1 {
   font-size: 23px;
 }
+
 
 /* ---------Dish selection box------- */
 
