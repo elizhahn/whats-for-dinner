@@ -1,5 +1,5 @@
 var inputDishes = document.querySelectorAll("input[name='dish']");
-var btnLetsCook = document.querySelector(".lets-cook");
+var btnLetsCook = document.querySelector(".lets-cook-btn");
 var imgCookPot = document.querySelector("svg");
 var randomDishIntro = document.querySelector("p");
 var randomDishText = document.querySelector(".random-dish");
