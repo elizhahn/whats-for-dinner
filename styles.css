@@ -9,7 +9,6 @@ red - #ee5253
 */
 /* add important */
 
-
 .hidden.pot-img, p.hidden {
   display: none;
 }
@@ -23,6 +22,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
 /* -------Top Bar--------- */
 
 header {
@@ -102,7 +102,7 @@ section h2 {
   height: 130px;
   width: 130px;
   display: block;
-  margin: 25% auto;
+  margin: 29% auto;
 }
 
 /* ------------Hidden dish Text-------- */
@@ -111,7 +111,7 @@ p {
   font-style: italic;
   font-size: 18px;
   text-align: center;
-  margin-top: 30%;
+  margin-top:
 }
 
 .random-dish {
@@ -119,4 +119,20 @@ p {
   font-weight: bold;
   font-size: 40px;
   text-align: center;
+}
+
+/* ----------Add a recipe bar----------- */
+
+.container {
+  height: 1200px;
+  position: relative;
+}
+
+section.add-recipe-bar {
+  width: 100%;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+
 }
