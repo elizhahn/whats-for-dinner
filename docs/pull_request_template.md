@@ -1,6 +1,8 @@
-## Is this a feature?
+## Is this a fix or feature?
 
-## Is this a fix?
+## What is the change?
+
+## What does it fix?
 
 ## Where should the reviewer start?
 
