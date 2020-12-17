@@ -9,7 +9,7 @@ red - #ee5253
 */
 /* add important */
 
- 
+
 .hidden.pot-img, p.hidden {
   display: none;
 }
@@ -33,6 +33,17 @@ header {
 
 header h1 {
   font-size: 23px;
+  display: inline-block;
+}
+
+.add-a-recipe {
+  float: right;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border-style: none;
+  padding: 10px 10px;
+  margin: 10px 40px;
 }
 
 
