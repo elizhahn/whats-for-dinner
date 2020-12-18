@@ -60,7 +60,7 @@ function displayRecipeBar() {
 function validateForm(e) {
 var messages = [];
 var test;
- if(inputUserDish.value.toLowerCase() !== "side") {
+ if(inputUserDish.value.toLowerCase() !== "side" && inputUserDish.value.toLowerCase() !== "main dish" && inputUserDish.value.toLowerCase() !== "dessert") {
   messages.push("Please enter: side, main dish, or dessert");
   }
   if(messages.length > 0) {
