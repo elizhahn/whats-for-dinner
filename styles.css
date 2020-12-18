@@ -9,6 +9,10 @@ red - #ee5253
 */
 /* add important */
 
+.hidden {
+  display: none;
+}
+
 .hidden.pot-img, p.hidden {
   display: none;
 }
@@ -115,7 +119,7 @@ p {
   font-style: italic;
   font-size: 18px;
   text-align: center;
-  margin-top:
+  margin-top: 160px;
 }
 
 .random-dish {
