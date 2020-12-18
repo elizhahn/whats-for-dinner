@@ -17,8 +17,8 @@ btnAddRecipe.addEventListener("click", displayRecipeBar);
 btnAddNew.addEventListener("click", validateForm);
 
 //retrieves random array index
-function randomIndex(array) {
-  return Math.floor(Math.random() * array.length)
+function randomIndex(recipies) {
+  return Math.floor(Math.random() * recipies.length)
 }
 
 //generates a random dish based on user input
