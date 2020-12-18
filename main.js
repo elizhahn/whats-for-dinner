@@ -1,4 +1,4 @@
-var recipeForm = document.querySelector(".add-recipe-bar");
+
 var inputDishes = document.querySelectorAll("input[name='dish']");
 var inputUserDish = document.getElementById("recipe-type");
 var inputUserRecipe = document.getElementById("recipe-name");
@@ -14,7 +14,7 @@ var randomDish;
 
 btnLetsCook.addEventListener("click", displayRandomDish);
 btnAddRecipe.addEventListener("click", displayRecipeBar);
-recipeForm.addEventListener("submit", validateForm);
+btnAddNew.addEventListener("click", validateForm);
 
 //retrieves random array index
 function randomIndex(array) {
@@ -37,12 +37,15 @@ function displayRandomDish() {
     randomDish = desserts[randomIndex(sides)];
   }
   displayDish()
+}
 
+function changeDisplay() {
+  imgCookPot.classList.add("hidden");
+  randomDishIntro.classList.remove("hidden");
 }
 
 function displayDish() {
-  imgCookPot.classList.add("hidden");
-  randomDishIntro.classList.remove("hidden");
+  changeDisplay();
   randomDishText.innerText = `${randomDish}!`
 }
 
@@ -55,16 +58,19 @@ function displayRecipeBar() {
 // }
 
 function validateForm(e) {
-  var messages = [];
-  var test;
-    if(inputUserDish.value !== "side") {
-    messages.push("Please enter: dish, main dish, or dessert");
-    }
-    if(messages.length > 0) {
-    e.preventDefault();
-    messageError.innerText = messages[0];
-    messageError.style.color = "red";
-  }else {
-    return true;
+var messages = [];
+var test;
+ if(inputUserDish.value.toLowerCase() !== "side") {
+  messages.push("Please enter: side, main dish, or dessert");
   }
+  if(messages.length > 0) {
+  e.preventDefault();
+  messageError.classList.remove("hidden");
+  messageError.innerText = messages[0];
+  messageError.style.color = "red";
+ }else {
+  e.preventDefault();
+  messageError.classList.add("hidden");
+  //return true? to use for other function?
+}
 }
