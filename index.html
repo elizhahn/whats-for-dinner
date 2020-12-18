@@ -38,18 +38,14 @@
           <p class="hidden">You should make:<br><span class="random-dish"></span></p>
         </div>
       </section>
-      <section class="add-recipe-bar hidden">
+      <form class="add-recipe-bar hidden">
+        <div id="error"></div>
         <label for="recipe-type">Recipe Type:</label>
-        <select name="recipe" id="recipe-type">
-            <option value="">Please choose an option</option>
-            <option value="side">Side</option>
-            <option value="main-dish">Main Dish</option>
-            <option value="dessert">Dessert</option>
-        </select>
+        <input name="recipe" id="recipe-type" value="">
         <label for="recipe-name">Recipe Name:</label>
         <input type="text" name="recipe-name" id="recipe-name">
-        <button class="add-new-btn">ADD NEW</button>
-      </section>
+        <button class="add-new-btn" name="form" type="submit">ADD NEW</button>
+      </form>
     </section>
   </body>
   <script type="text/javascript" src="data.js"></script>
