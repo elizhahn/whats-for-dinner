@@ -8,7 +8,8 @@ var sides = [
 "Caeser Salad",
 "Shrimp Summer Rolls",
 "Garlic Butter Mushrooms",
-"Hush Puppies"];
+"Hush Puppies"
+];
 
 var mainDishes = [
 "Spaghetti and Meatballs",
@@ -23,7 +24,8 @@ var mainDishes = [
 "Empanadas",
 "Chicken Fried Rice",
 "Sheet Pan Fajitas",
-"Margarita Pizza"];
+"Margarita Pizza"
+];
 
  var desserts = [
 "Apple Pie",
@@ -43,4 +45,5 @@ var mainDishes = [
 "Key Lime Pie",
 "Tart Tatin",
 "Croissants",
-"Eclairs"]
+"Eclairs"
+];
