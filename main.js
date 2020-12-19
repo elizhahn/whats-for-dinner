@@ -58,8 +58,23 @@ function displayUserRecipe() {
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
 }
 
+function addUserRecipe () {
+  var mealType = inputUserMealType.value;
+  var userRecipe = inputUserRecipe.value;
+  if(mealType.toLowerCase() === "side") {
+    sides.push(userRecipe);
+  }
+  if(mealType.toLowerCase() === "main dish") {
+    mainDishes.push(userRecipe);
+  }
+  if(mealType.toLowerCase() === "dessert") {
+    desserts.push(userRecipe);
+  }
+}
+
 function validateForm(e) {
- if(inputUserMealType.value.toLowerCase() !== "side" && inputUserMealType.value.toLowerCase() !== "main dish" && inputUserMealType.value.toLowerCase() !== "dessert") {
+var mealType = inputUserMealType.value;
+ if(mealType.toLowerCase() !== "side" && mealType.toLowerCase() !== "main dish" && mealType.toLowerCase() !== "dessert") {
    e.preventDefault();
    messageError.classList.remove("hidden");
    messageError.innerText = "Please enter: side, main dish, or dessert";
@@ -71,6 +86,6 @@ function validateForm(e) {
   e.preventDefault();
   messageError.classList.add("hidden");
   displayUserRecipe();
-  //return true? to use for other function?
+  addUserRecipe();
 }
 }
