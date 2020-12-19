@@ -136,7 +136,7 @@ p {
   position: relative;
 }
 
-section.add-recipe-bar {
+.add-recipe-bar {
   width: 100%;
   background-color: rgba(225, 225, 225, .9);
   padding: 15px;
@@ -155,7 +155,7 @@ section.add-recipe-bar {
 
 #recipe-type {
   margin: 10px;
-  height: 34px;
+  height: 25px;
 }
 
 #recipe-name {
