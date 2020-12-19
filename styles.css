@@ -7,4 +7,105 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+/* add important */
 
+ 
+.hidden.pot-img, p.hidden {
+  display: none;
+}
+
+
+body {
+  background-image: url("./assets/burger-friends.jpg");
+  background-size: cover;
+  letter-spacing: -1px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+/* -------Top Bar--------- */
+
+header {
+  background-color: #0fb9b1;
+  width: 100%;
+  padding: 2px 20px;
+}
+
+header h1 {
+  font-size: 23px;
+}
+
+
+/* ---------Dish selection box------- */
+
+/* need to get the asterisk up higher */
+section h2::after {
+  content: "*";
+  color: red;
+}
+
+section h2 {
+  font-size: 30px;
+}
+
+.white-box {
+  background-color: rgba(225, 225, 225, .9);
+  float: left;
+  width: 500px;
+  height: 400px;
+  margin: 65px 100px;
+}
+
+.box-contents {
+  margin-left: 10%;
+  margin-top: 15%;
+}
+
+/* radiobuttons on separate lines */
+.radio-btn {
+  padding: 10px;
+  display: block;
+}
+
+/* radio button labels */
+.dish-type {
+  font-size: 18px;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+/* Lets cook button */
+.lets-cook-btn {
+  background-color: #0fb9b1;
+  width: 200px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 10px 10px;
+}
+
+/* -------dish Box------------------- */
+
+.pot-img {
+  height: 130px;
+  width: 130px;
+  display: block;
+  margin: 25% auto;
+}
+
+/* ------------Hidden dish Text-------- */
+
+p {
+  font-style: italic;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30%;
+}
+
+.random-dish {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
