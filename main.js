@@ -53,24 +53,21 @@ function displayRecipeBar() {
   recipeBar.classList.remove("hidden");
 }
 
-// function addUserRecipe() {
-//   if()
-// }
+function displayUserRecipe() {
+  changeDisplay();
+  randomDishText.innerText = `${inputUserRecipe.value}`;
+}
 
 function validateForm(e) {
-var messages = [];
-var test;
  if(inputUserDish.value.toLowerCase() !== "side" && inputUserDish.value.toLowerCase() !== "main dish" && inputUserDish.value.toLowerCase() !== "dessert") {
-  messages.push("Please enter: side, main dish, or dessert");
-  }
-  if(messages.length > 0) {
-  e.preventDefault();
-  messageError.classList.remove("hidden");
-  messageError.innerText = messages[0];
-  messageError.style.color = "red";
- }else {
+   e.preventDefault();
+   messageError.classList.remove("hidden");
+   messageError.innerText = "Please enter: side, main dish, or dessert";
+   messageError.style.color = "red";
+} else {
   e.preventDefault();
   messageError.classList.add("hidden");
+  displayUserRecipe();
   //return true? to use for other function?
 }
 }
