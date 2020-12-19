@@ -162,3 +162,7 @@ p {
   margin-left: 10px;
   height: 25px;
 }
+
+#error {
+  color: #fc0f03;
+}
