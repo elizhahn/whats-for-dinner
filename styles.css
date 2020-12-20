@@ -1,13 +1,3 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-/* add important */
 
 .hidden {
   display: none;
@@ -30,7 +20,7 @@ body {
   padding: 0px;
 }
 
-/* -------Top Bar--------- */
+/* --------------Top Bar---------------- */
 
 header {
   background-color: #0fb9b1;
@@ -55,12 +45,12 @@ header h1 {
 }
 
 
-/* ---------Dish selection box------- */
+/* ---------Meal-Type selection box------- */
 
 /* need to get the asterisk up higher */
 section h2::after {
   content: "*";
-  color: red;
+  color: #ee5253;
 }
 
 section h2 {
@@ -80,20 +70,20 @@ section h2 {
   margin-top: 15%;
 }
 
-/* radiobuttons on separate lines */
+
 .radio-btn {
   padding: 10px;
   display: block;
 }
 
-/* radio button labels */
-.dish-type {
+
+.meal-type {
   font-size: 18px;
   vertical-align: middle;
   padding: 5px;
 }
 
-/* Lets cook button */
+
 .lets-cook-btn {
   background-color: #0fb9b1;
   width: 200px;
@@ -104,7 +94,7 @@ section h2 {
   margin: 10px 10px;
 }
 
-/* -------dish Box------------------- */
+/* -------Recipe Box------------------- */
 
 .pot-img {
   height: 130px;
@@ -113,7 +103,7 @@ section h2 {
   margin: 29% auto;
 }
 
-/* ------------Hidden dish Text-------- */
+/* ------------Hidden Recipe Text-------- */
 
 p {
   font-style: italic;
