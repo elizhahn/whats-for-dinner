@@ -1,4 +1,4 @@
-
+/* #95a5a6 */
 .hidden {
   display: none;
 }
@@ -106,6 +106,17 @@ section h2 {
   width: 130px;
   display: block;
   margin: 29% auto;
+}
+
+.clear-btn {
+  font-size: .938em;
+  color: white;
+  border-radius: 5px;
+  background-color: #95a5a6;
+  border-style: none;
+  padding: 10px 10px;
+  margin-top: 100px;
+  margin-left: 400px;
 }
 
 /* ------------Hidden Recipe Text-------- */
