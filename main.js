@@ -2,19 +2,33 @@
 var inputMealType = document.querySelectorAll("input[name='dish']");
 var inputUserMealType = document.getElementById("recipe-type");
 var inputUserRecipe = document.getElementById("recipe-name");
+var inputUsername = document.getElementById("user-name");
+var inputPassword = document.getElementById("password");
 var btnLetsCook = document.querySelector(".lets-cook-btn");
 var btnAddRecipe = document.querySelector(".add-a-recipe");
+var formLogin = document.querySelector("form");
 var btnAddNew = document.querySelector(".add-new-btn");
+var btnLogin = document.querySelector(".login-btn");
+var mainPage = document.querySelector(".container");
+var loginPage = document.querySelector(".login-container");
 var imgCookPot = document.querySelector("svg");
 var randomRecipeIntro = document.querySelector("p");
 var randomRecipeText = document.querySelector(".random-dish");
 var recipeBar = document.querySelector(".add-recipe-bar");
 var messageError = document.getElementById("error");
+var passwordError = document.querySelector(".pwd-msg");
 var randomRecipe;
 
 btnLetsCook.addEventListener("click", displayRandomDish);
 btnAddRecipe.addEventListener("click", displayRecipeBar);
 btnAddNew.addEventListener("click", validateForm);
+formLogin.addEventListener("submit", login);
+
+function login(e) {
+  e.preventDefault();
+  loginPage.classList.add("hidden");
+  mainPage.classList.remove("hidden");
+}
 
 //retrieves random array index
 function randomIndex(recipies) {
