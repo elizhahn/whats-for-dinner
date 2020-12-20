@@ -29,14 +29,14 @@ header {
 }
 
 header h1 {
-  font-size: 23px;
+  font-size: 1.438em;
   display: inline-block;
   margin: 15px 10px;
 }
 
 .add-a-recipe {
   float: right;
-  font-size: 15px;
+  font-size: .938em;
   border-radius: 5px;
   background-color: white;
   border-style: none;
@@ -78,7 +78,7 @@ section h2 {
 
 
 .meal-type {
-  font-size: 18px;
+  font-size: 1.125em;
   vertical-align: middle;
   padding: 5px;
 }
@@ -87,7 +87,7 @@ section h2 {
 .lets-cook-btn {
   background-color: #0fb9b1;
   width: 200px;
-  font-size: 18px;
+  font-size: 1.125em;
   border: none;
   border-radius: 5px;
   padding: 8px;
@@ -107,7 +107,7 @@ section h2 {
 
 p {
   font-style: italic;
-  font-size: 18px;
+  font-size: 1.125em;
   text-align: center;
   margin-top: 160px;
 }
@@ -115,7 +115,7 @@ p {
 .random-dish {
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ p {
 .add-new-btn {
   background-color: #0fb9b1;
   border: none;
-  font-size: 15px;
+  font-size: .938em;
   border-radius: 5px;
   padding: 6px 10px;
   margin-left: 20px;
