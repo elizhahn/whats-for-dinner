@@ -197,6 +197,17 @@ p {
    border-bottom: solid;
 }
 
+input:invalid {
+  background-color: #c2edec;
+}
+
+.pwd-msg {
+  padding-top: 5px;
+  margin: 0px 29px;
+  font-size: .8em;
+}
+
+
 .login-inputs {
   margin-top: 70px;
   padding-left: 20px;
@@ -209,6 +220,7 @@ p {
   height: 30px;
   flex: 1;
   margin-right: 30px;
+  border: none;
 
 }
 
