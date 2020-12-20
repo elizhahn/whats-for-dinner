@@ -4,12 +4,14 @@ var inputUserMealType = document.getElementById("recipe-type");
 var inputUserRecipe = document.getElementById("recipe-name");
 var inputUsername = document.getElementById("user-name");
 var inputPassword = document.getElementById("password");
+var inputName = document.getElementById("name");
 var btnLetsCook = document.querySelector(".lets-cook-btn");
 var btnAddRecipe = document.querySelector(".add-a-recipe");
 var btnAddNew = document.querySelector(".add-new-btn");
 var mainPage = document.querySelector(".container");
 var loginPage = document.querySelector(".login-container");
 var formLogin = document.querySelector("form");
+var welcomeMessage = document.querySelector(".welcome-msg");
 var imgCookPot = document.querySelector("svg");
 var randomRecipeIntro = document.querySelector("p");
 var randomRecipeText = document.querySelector(".random-dish");
@@ -17,6 +19,7 @@ var recipeBar = document.querySelector(".add-recipe-bar");
 var messageError = document.getElementById("error");
 var passwordError = document.querySelector(".pwd-msg");
 var randomRecipe;
+var users = [];
 
 btnLetsCook.addEventListener("click", displayRandomDish);
 btnAddRecipe.addEventListener("click", displayRecipeBar);
@@ -27,6 +30,13 @@ function login(e) {
   e.preventDefault();
   loginPage.classList.add("hidden");
   mainPage.classList.remove("hidden");
+  displayWelcome();
+}
+
+function displayWelcome() {
+  var user = new User(inputName.value, inputUsername.value, inputPassword.value);
+  users.push(user);
+  welcomeMessage.innerText = `Hello,  ${inputName.value}`
 }
 
 function randomIndex(recipies) {
