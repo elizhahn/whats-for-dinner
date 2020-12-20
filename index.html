@@ -7,7 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section class="container">
+    <section class="login-container overlay">
+      <section class="login-box">
+        <h1 class="login-title">Please Login<h1>
+        <form>
+          <div class="login-inputs">
+            <input class="input-box" type="email" name="userName" placeholder="username" id="user-name" required>
+          </div>
+          <div class="login-inputs">
+            <input class="input-box" type="password" name="password" placeholder="password" id="password" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" required>
+          </div>
+          <div class="pwd-msg"> Password requires at least: one uppercase letter, one lowercase letter, and one digit</div>
+          <input class="login-btn" type="submit" value="Login"/>
+        </form>
+      </section>
+    </section>
+    <section class="container hidden">
       <header>
         <h1 class="title">What's For Dinner?</h1>
         <button class="add-a-recipe">ADD A RECIPE</button>
@@ -17,15 +32,15 @@
           <h2>What are you looking for?</h1>
           <div class="radio-btn">
             <input type="radio" name="dish" value="sides">
-            <label class="dish-type"for="sides">Side</label>
+            <label class="meal-type"for="sides">Side</label>
           </div>
           <div class="radio-btn">
             <input  type="radio" name="dish" value="main-dishes">
-            <label class="dish-type"for="main-dishes">Main Dish</label>
+            <label class="meal-type"for="main-dishes">Main Dish</label>
           </div>
           <div class="radio-btn">
             <input type="radio" name="dish" value="desserts">
-            <label class="dish-type" for="desserts">Dessert</label>
+            <label class="meal-type" for="desserts">Dessert</label>
           </div>
           <button class="lets-cook-btn">LET'S COOK!</button>
         </div>
