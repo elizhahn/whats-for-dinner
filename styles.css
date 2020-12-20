@@ -9,7 +9,10 @@ red - #ee5253
 */
 /* add important */
 
- 
+.hidden {
+  display: none;
+}
+
 .hidden.pot-img, p.hidden {
   display: none;
 }
@@ -18,11 +21,15 @@ red - #ee5253
 body {
   background-image: url("./assets/burger-friends.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   letter-spacing: -1px;
   font-family: 'Roboto', sans-serif;
+  min-width: 100%;
+  min-height: 100%;
   margin: 0px;
   padding: 0px;
 }
+
 /* -------Top Bar--------- */
 
 header {
@@ -33,6 +40,18 @@ header {
 
 header h1 {
   font-size: 23px;
+  display: inline-block;
+  margin: 15px 10px;
+}
+
+.add-a-recipe {
+  float: right;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border-style: none;
+  padding: 10px 10px;
+  margin: 10px 40px;
 }
 
 
@@ -91,7 +110,7 @@ section h2 {
   height: 130px;
   width: 130px;
   display: block;
-  margin: 25% auto;
+  margin: 29% auto;
 }
 
 /* ------------Hidden dish Text-------- */
@@ -100,7 +119,7 @@ p {
   font-style: italic;
   font-size: 18px;
   text-align: center;
-  margin-top: 30%;
+  margin-top: 160px;
 }
 
 .random-dish {
@@ -108,4 +127,42 @@ p {
   font-weight: bold;
   font-size: 40px;
   text-align: center;
+}
+
+/* ----------Add a recipe bar----------- */
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.add-recipe-bar {
+  width: 100%;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 15px;
+  position: fixed;
+  bottom: 0%;
+}
+
+.add-new-btn {
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin-left: 20px;
+}
+
+#recipe-type {
+  margin: 10px;
+  height: 25px;
+}
+
+#recipe-name {
+  margin-left: 10px;
+  height: 25px;
+}
+
+#error {
+  color: #fc0f03;
 }
