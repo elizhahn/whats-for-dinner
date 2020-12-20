@@ -7,6 +7,7 @@ var inputPassword = document.getElementById("password");
 var inputName = document.getElementById("name");
 var btnLetsCook = document.querySelector(".lets-cook-btn");
 var btnAddRecipe = document.querySelector(".add-a-recipe");
+var btnClear = document.querySelector(".clear-btn");
 var btnAddNew = document.querySelector(".add-new-btn");
 var mainPage = document.querySelector(".container");
 var loginPage = document.querySelector(".login-container");
@@ -24,6 +25,7 @@ var users = [];
 btnLetsCook.addEventListener("click", displayRandomDish);
 btnAddRecipe.addEventListener("click", displayRecipeBar);
 btnAddNew.addEventListener("click", validateForm);
+btnClear.addEventListener("click", clearRecipe);
 formLogin.addEventListener("submit", login);
 
 function login(e) {
@@ -60,9 +62,15 @@ function displayRandomDish() {
   displayRecipe();
 };
 
+function clearRecipe() {
+  changeDisplay();
+  randomRecipeText.innerText = "";
+}
+
 function changeDisplay() {
-  imgCookPot.classList.add("hidden");
-  randomRecipeIntro.classList.remove("hidden");
+  imgCookPot.classList.toggle("hidden");
+  randomRecipeIntro.classList.toggle("hidden");
+  btnClear.classList.toggle("hidden");
 };
 
 function displayRecipe() {
@@ -108,5 +116,6 @@ function validateForm(e) {
     messageError.classList.add("hidden");
     displayUserRecipe();
     addUserRecipe();
+    recipeBar.reset();
   };
 };
