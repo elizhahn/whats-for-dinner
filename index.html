@@ -7,7 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section class="container">
+    <section class="login-container overlay">
+      <section class="login-box">
+        <h1 class="login-title">Please Login<h1>
+        <form>
+          <div class="login-inputs">
+            <input class="input-box" type="text" name="userName" placeholder="username" required>
+          </div>
+          <div class="login-inputs">
+            <input class="input-box" type="password" name="password" placeholder="password" required>
+          </div>
+          <input class="login-btn" type="submit" value="Login"/>
+        </form>
+      </section>
+    </section>
+    <section class="container hidden">
       <header>
         <h1 class="title">What's For Dinner?</h1>
         <button class="add-a-recipe">ADD A RECIPE</button>
