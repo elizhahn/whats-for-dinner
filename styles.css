@@ -13,7 +13,7 @@ red - #ee5253
   display: none;
 }
 
-.hidden.pot-img, p.hidden {
+.hidden.pot-img, p.hidden, .login-container.hidden {
   display: none;
 }
 
