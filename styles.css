@@ -48,13 +48,18 @@ header h1 {
 /* ---------Meal-Type selection box------- */
 
 /* need to get the asterisk up higher */
+
+.welcome-msg {
+  font-style: italic;
+}
+
 section h2::after {
   content: "*";
   color: #ee5253;
 }
 
 section h2 {
-  font-size: 30px;
+  font-size: 1.875em;
 }
 
 .white-box {
@@ -67,7 +72,7 @@ section h2 {
 
 .box-contents {
   margin-left: 10%;
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 
