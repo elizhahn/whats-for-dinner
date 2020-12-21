@@ -17,10 +17,10 @@ A [Front-End Project](https://frontend.turing.io/projects/module-1/dinner.html) 
 
 ## Overview
 
-This is a Turing School of Software and Design Module 1 project. The project consists of building an application to match a provided comp. The MVP will allow the user to chose a meal type and a random recipe idea will be displayed. In addition to building the application MVP, three extra functionalities were built:
+This is a Turing School of Software and Design Module 1 project. The project consists of building an application to match a provided comp. The MVP will allow the user to choose a meal type and a random recipe idea will display. In addition to building the application MVP, three extra functionalities were built:
 
 * Creating a login page that matches the comp. The user should be able to login and be taken to the main page
-* User ability to add a recipe of their own that is displayed on the main page and will be stored with the other recipies according to meal type. 
+* User ability to add a recipe of their own that is displayed on the main page and will be stored with the other recipes according to meal type. 
 * Ability to clear the recipe from the main page
 * Error handling for login page and add a recipe bar
 
