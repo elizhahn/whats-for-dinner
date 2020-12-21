@@ -1,5 +1,5 @@
 
-##title: RomCom - Pair
+## title: What's For Dinner?
 ---
 
 A [Front-End Project](https://frontend.turing.io/projects/module-1/dinner.html) by [Elizabeth Hahn](https://github.com/elizhahn) 
@@ -45,8 +45,8 @@ This is a Turing School of Software and Design Module 1 project. The project con
 ---
 ## Features
 
-+ [Desktop Layout](#desktop-layout)
-+ [Create Random Cover](#create-random-cover)
++ [Login Page](#login-page)
++ [Main Page Layout](#main-page-layout)
 + [Make Your Own Cover](#create-your-own-cover)
 + [Save Cover](#save-cover)
 + [Delete Cover](#delete-cover)
@@ -63,11 +63,13 @@ When user visits the page, they will be taken to a login page. Each input field 
 
 The main page was built to match this [spec](https://frontend.turing.io/projects/module-1/dinner.html). 
 
-![]
+![comp](comp.png)
 
 
-## Make Your Own Cover
-To create their own cover, the user can select the "Make Your Own Cover" button and enter values in each input field. To see their new cover, the user can then click "Make My Book". This button should take the user to the main view and display their new cover.
+## Display Random Recipe
+
+When the user chooses a meal type, the cookpot image should disappear and a random recipe idea should display. The user should only be able to choose one, and cannot leave a radio button unchecked. 
+
 
 ![](https://media.giphy.com/media/cNBrxuiVZxnlfBtFkV/giphy.gif)
 
