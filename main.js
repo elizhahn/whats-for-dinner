@@ -63,18 +63,24 @@ function displayRandomDish() {
 };
 
 function clearRecipe() {
-  changeDisplay();
+  hideRecipe();
   randomRecipeText.innerText = "";
 }
 
-function changeDisplay() {
-  imgCookPot.classList.toggle("hidden");
-  randomRecipeIntro.classList.toggle("hidden");
-  btnClear.classList.toggle("hidden");
+function hideRecipe() {
+  imgCookPot.classList.remove("hidden");
+  randomRecipeIntro.classList.add("hidden");
+  btnClear.classList.add("hidden");
+}
+
+function showRecipe() {
+  imgCookPot.classList.add("hidden");
+  randomRecipeIntro.classList.remove("hidden");
+  btnClear.classList.remove("hidden");
 };
 
 function displayRecipe() {
-  changeDisplay();
+  showRecipe();
   randomRecipeText.innerText = `${randomRecipe}!`
 };
 
@@ -83,7 +89,7 @@ function displayRecipeBar() {
 };
 
 function displayUserRecipe() {
-  changeDisplay();
+  showRecipe();
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
 };
 
