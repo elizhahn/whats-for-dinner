@@ -27,6 +27,7 @@ btnAddRecipe.addEventListener("click", displayRecipeBar);
 btnAddNew.addEventListener("click", validateForm);
 btnClear.addEventListener("click", clearRecipe);
 formLogin.addEventListener("submit", login);
+recipeBar.addEventListener("dblclick", displayRecipeBar);
 
 function login(e) {
   e.preventDefault();
@@ -85,7 +86,7 @@ function displayRecipe() {
 };
 
 function displayRecipeBar() {
-  recipeBar.classList.remove("hidden");
+  recipeBar.classList.toggle("hidden");
 };
 
 function displayUserRecipe() {
