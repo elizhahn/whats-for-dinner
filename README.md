@@ -47,9 +47,9 @@ This is a Turing School of Software and Design Module 1 project. The project con
 
 + [Login Page](#login-page)
 + [Main Page Layout](#main-page-layout)
-+ [Make Your Own Cover](#create-your-own-cover)
-+ [Save Cover](#save-cover)
-+ [Delete Cover](#delete-cover)
++ [Display Random Recipe](#create-your-own-cover)
++ [Clear Recipe](#save-cover)
++ [Add A Recipe](#delete-cover)
 
 
 ## Login Page
@@ -63,7 +63,7 @@ When user visits the page, they will be taken to a login page. Each input field 
 
 The main page was built to match this [spec](https://frontend.turing.io/projects/module-1/dinner.html). 
 
-![comp](comp.png)
+![comp](docs/comp.png)
 
 
 ## Display Random Recipe
@@ -71,44 +71,43 @@ The main page was built to match this [spec](https://frontend.turing.io/projects
 When the user chooses a meal type, the cookpot image should disappear and a random recipe idea should display. The user should only be able to choose one, and cannot leave a radio button unchecked. 
 
 
-![](https://media.giphy.com/media/cNBrxuiVZxnlfBtFkV/giphy.gif)
+![](https://media.giphy.com/media/nSv5Jf012x4BCvZMP9/giphy.gif)
 
 
-## Save Cover
-To save their created cover, the user can select the "Save Cover" button. This button should save unique covers, no matter how many times this button is clicked. To view all saved covers, the user can select the "View Saved Covers" button.
+## Clear Recipe
+When the user clicks the "LET'S COOK!" button, a recipe will be displayed and a clear button will appear. When the clear button is clicked, the cook pot image should be displayed and the recipe should be cleared and hidden. 
 
-![](https://media.giphy.com/media/sC4zvGyLEPvAKHlWkh/giphy.gif)
-
-
-## Delete Cover
-
-To delete a cover, all a user needs to do is be in the saved covers section after clicking "View Saved Covers", and then double click on the cover they wish to delete. The cover should disappear from view.
-
-![](https://media.giphy.com/media/1HWz2qho2fsvVk4I72/giphy.gif)
+![](https://media.giphy.com/media/mmevdry5IHNJ8QGOEQ/giphy.gif)
 
 
+## Add A Recipe
+
+If the "ADD A RECIPE" button is clicked, a bar on the bottom of the page will appear and give the user an option to add their own unique recipe idea. Input validation checks for the correct meal type and for empty fields. An error message will display to guide the user into correctly submitting a recipe. When recipe is submitted, input fields are cleared. Additionally, the user can hide the recipe bar by double clicking anywhere on the bar. 
+
+![](https://media.giphy.com/media/1D7GoxY1WWlzU1st7K/giphy.gif)
+
+---
+
+![](https://media.giphy.com/media/3g3zShFYZpi7dQRGwX/giphy.gif)
 ---
 ## Challenges
 
-* Figuring out how to manipulate CSS styling with JavaScript.
-* Figuring out how to target a DOM event upon double-click, and manipulating associated data.
-* GitHub.
+* Integrating brand new CSS knowledge into building the comp proved to be challenging. 
+* Form validation was also another area that required some time to figure out the best way to validate for the user. 
+* Making methodical and organized commits is still something to work on. 
 
 
 ---
 ## Wins
 
-* Collaborating well on our first Paired Project, and helping each other understand new and complex concepts.
-* Successfully applying correct CSS elements to create a beautiful display.
-* Learning how to apply new concepts with every iteration.
-* Practice debugging.
+* Successfully meeting all the learning goals and completing 3 CYOA features.
+* Designing and creating a login page to match the application.
+* Debugging with the debugger and Dev tools.
 
 ---
 ## Future Additions
 
-* Implement data validation and error handling into form (disable the Make My Book button until all fields are filled, provide error messages if data entered is incorrect).
-* When a user single-clicks a saved cover, create a Modal to view it larger
-* Allow users to drag-and-drop saved covers into whatever order they want them to appear
-
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+* Create local storage so user data persists after page reloads. 
+* Have an option for the user to create an account, and their information will be saved, if the user has an account, they can sign in with their email, and password and be greeted on the main page personally without inputting their name
+* username and password validation from server side 
+* Animated transition from login page to main page
