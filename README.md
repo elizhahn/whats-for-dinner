@@ -1,5 +1,5 @@
 
-## title: What's For Dinner?
+## What's For Dinner?
 ---
 
 A [Front-End Project](https://frontend.turing.io/projects/module-1/dinner.html) by [Elizabeth Hahn](https://github.com/elizhahn) 
