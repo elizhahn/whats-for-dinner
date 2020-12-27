@@ -26,16 +26,18 @@ header {
   background-color: #0fb9b1;
   width: 100%;
   padding: 2px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 header h1 {
+  flex: 1;
   font-size: 1.438em;
   display: inline-block;
   margin: 15px 10px;
 }
 
 .add-a-recipe {
-  float: right;
   font-size: .938em;
   border-radius: 5px;
   background-color: white;
