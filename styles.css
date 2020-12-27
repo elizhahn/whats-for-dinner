@@ -127,7 +127,7 @@ section h2 {
 
 /* ------------Hidden Recipe Text-------- */
 
-p {
+.intro {
   font-style: italic;
   font-size: 1.125em;
   text-align: center;
