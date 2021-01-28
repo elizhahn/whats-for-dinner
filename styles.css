@@ -108,37 +108,42 @@ section h2 {
 /* -------Recipe Box------------------- */
 
 .pot-img {
+  display: block;
+  margin: 26% auto;
   height: 130px;
   width: 130px;
-  display: block;
-  margin: 29% auto;
 }
 
+.clear-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 .clear-btn {
+  margin: 80px 20px;
   font-size: .938em;
   color: white;
   border-radius: 5px;
   background-color: #95a5a6;
   border-style: none;
   padding: 10px 10px;
-  margin-top: 100px;
-  margin-left: 400px;
 }
 
 /* ------------Hidden Recipe Text-------- */
 
 .intro {
+  margin-top: 130px;
+  text-align: center;
   font-style: italic;
   font-size: 1.125em;
-  text-align: center;
-  margin-top: 160px;
 }
 
 .random-dish {
+  text-align: center;
   font-style: normal;
   font-weight: bold;
   font-size: 2em;
-  text-align: center;
 }
 
 /* ----------Add a recipe bar----------- */
