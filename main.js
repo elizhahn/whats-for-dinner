@@ -98,56 +98,39 @@ function displayUserRecipe() {
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
 };
 
-function addUserRecipe () {
+function validateUserRecipe(e) {
   var mealType = inputUserMealType.value;
-  var userRecipe = inputUserRecipe.value;
   switch(mealType.toLowerCase()) {
     case "side":
-    sides.push(userRecipe);
+    addUserRecipe();
     break;
     case "main dish":
-    mainDishes.push(userRecipe);
+    addUserRecipe();
     break;
     case "dessert":
-    desserts.push(userRecipe);
+    addUserRecipe();
     break;
+    default:
+    messageError.classList.remove("hidden");
+    messageError.innerText = "Please enter: side, main dish, or dessert";
   };
 }
 
-// function validateForm(e) {
-//   var mealType = inputUserMealType.value;
-//    if(mealType.toLowerCase() !== "side" && mealType.toLowerCase() !== "main dish" && mealType.toLowerCase() !== "dessert") {
-//      e.preventDefault();
-//      messageError.classList.remove("hidden");
-//      messageError.innerText = "Please enter: side, main dish, or dessert";
-//   } else if(inputUserRecipe.value === "") {
-//       e.preventDefault();
-//       messageError.classList.remove("hidden");
-//       messageError.innerText = "input required";
-//   } else {
-//     e.preventDefault();
-//     messageError.classList.add("hidden");
-//     displayUserRecipe();
-//     addUserRecipe();
-//     recipeBar.reset();
-//   };
-// };
+function addUserRecipe() {
+  var userRecipe = inputUserRecipe.value;
+  sides.push(userRecipe);
+  displayUserRecipe();
+  messageError.classList.add("hidden");
+  recipeBar.reset();
+}
+
 
 function validateForm(e) {
-  var mealType = inputUserMealType.value;
-   if(mealType.toLowerCase() !== "side" && mealType.toLowerCase() !== "main dish" && mealType.toLowerCase() !== "dessert") {
-     e.preventDefault();
-     messageError.classList.remove("hidden");
-     messageError.innerText = "Please enter: side, main dish, or dessert";
-  } else if(inputUserRecipe.value === "") {
-      e.preventDefault();
+  e.preventDefault();
+  if(inputUserRecipe.value === "" || inputUserMealType.value === "") {
       messageError.classList.remove("hidden");
       messageError.innerText = "input required";
   } else {
-    e.preventDefault();
-    messageError.classList.add("hidden");
-    displayUserRecipe();
-    addUserRecipe();
-    recipeBar.reset();
-  };
+    validateUserRecipe(e);
+  }
 };
