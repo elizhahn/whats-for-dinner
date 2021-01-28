@@ -98,16 +98,15 @@ function displayUserRecipe() {
 function addUserRecipe () {
   var mealType = inputUserMealType.value;
   var userRecipe = inputUserRecipe.value;
-  if(mealType.toLowerCase() === "side") {
+  switch(mealType.toLowerCase()) {
+    case "side":
     sides.push(userRecipe);
-  };
-  if(mealType.toLowerCase() === "main dish") {
+    case "main dish":
     mainDishes.push(userRecipe);
-  };
-  if(mealType.toLowerCase() === "dessert") {
+    case "dessert":
     desserts.push(userRecipe);
   };
-};
+}
 
 function validateForm(e) {
   var mealType = inputUserMealType.value;
