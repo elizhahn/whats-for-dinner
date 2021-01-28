@@ -48,16 +48,17 @@ function randomIndex(recipies) {
 
 function displayRandomDish() {
   var userChoice;
-  for(var i = 0; i < inputMealType.length; i++) {
-    if(inputMealType[i].checked) {
-    userChoice = inputMealType[i].value;
+  inputMealType.forEach(meal => {
+    if(meal.checked) {
+    userChoice = meal.value;
   };
-};
-  if(userChoice === "sides") {
+});
+  switch(userChoice) {
+    case "sides":
     randomRecipe = sides[randomIndex(sides)];
-  }else if (userChoice === "main-dishes") {
+    case "main-dishes":
     randomRecipe = mainDishes[randomIndex(sides)];
-  }else {
+    case "desserts":
     randomRecipe = desserts[randomIndex(sides)];
   }
   displayRecipe();
