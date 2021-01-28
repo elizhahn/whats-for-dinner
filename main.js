@@ -29,10 +29,18 @@ btnClear.addEventListener("click", clearRecipe);
 formLogin.addEventListener("submit", login);
 recipeBar.addEventListener("dblclick", displayRecipeBar);
 
+function display(feature) {
+  feature.classList.remove("hidden");
+}
+
+function hide(feature) {
+  feature.classList.add("hidden");
+}
+
 function login(e) {
   e.preventDefault();
-  loginPage.classList.add("hidden");
-  mainPage.classList.remove("hidden");
+  hide(loginPage);
+  display(mainPage);
   displayWelcome();
 }
 
@@ -69,16 +77,16 @@ function displayRandomDish() {
 };
 
 function clearRecipe() {
-  imgCookPot.classList.remove("hidden");
-  randomRecipeIntro.classList.add("hidden");
-  btnClear.classList.add("hidden");
+  display(imgCookPot);
+  hide(randomRecipeIntro);
+  hide(btnClear);
   randomRecipeText.innerText = "";
 }
 
 function displayRecipe() {
-  imgCookPot.classList.add("hidden");
-  randomRecipeIntro.classList.remove("hidden");
-  btnClear.classList.remove("hidden");
+  hide(imgCookPot);
+  display(randomRecipeIntro);
+  display(btnClear);
 };
 
 function displayRecipeBar() {
@@ -90,7 +98,7 @@ function displayUserRecipe() {
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
 };
 
-function validateUserRecipe(e) {
+function validateUserRecipe() {
   var mealType = inputUserMealType.value;
   switch(mealType.toLowerCase()) {
     case "side":
@@ -103,7 +111,7 @@ function validateUserRecipe(e) {
     addUserRecipe();
     break;
     default:
-    messageError.classList.remove("hidden");
+    display(messageError);
     messageError.innerText = "Please enter: side, main dish, or dessert";
   };
 }
@@ -112,16 +120,16 @@ function addUserRecipe() {
   var userRecipe = inputUserRecipe.value;
   sides.push(userRecipe);
   displayUserRecipe();
-  messageError.classList.add("hidden");
+  hide(messageError);
   recipeBar.reset();
 }
 
 function validateForm(e) {
   e.preventDefault();
   if(inputUserRecipe.value === "" || inputUserMealType.value === "") {
-      messageError.classList.remove("hidden");
+      display(messageError);
       messageError.innerText = "input required";
   } else {
-    validateUserRecipe(e);
+    validateUserRecipe();
   }
 };
