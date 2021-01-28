@@ -18,7 +18,6 @@ var randomRecipeIntro = document.querySelector("p");
 var randomRecipeText = document.querySelector(".random-dish");
 var recipeBar = document.querySelector(".add-recipe-bar");
 var messageError = document.getElementById("error");
-var passwordError = document.querySelector(".pwd-msg");
 var randomRecipe;
 var users = [];
 
@@ -52,29 +51,29 @@ function displayWelcome() {
 
 function randomIndex(recipies) {
   return Math.floor(Math.random() * recipies.length);
-};
+}
 
 function displayRandomDish() {
   var userChoice;
   inputMealType.forEach(meal => {
-    if(meal.checked) {
-    userChoice = meal.value;
-  };
-});
-  switch(userChoice) {
-    case "sides":
+    if (meal.checked) {
+      userChoice = meal.value;
+    }
+  })
+  switch (userChoice) {
+  case "sides":
     randomRecipe = sides[randomIndex(sides)];
     break;
-    case "main-dishes":
+  case "main-dishes":
     randomRecipe = mainDishes[randomIndex(sides)];
     break;
-    case "desserts":
+  case "desserts":
     randomRecipe = desserts[randomIndex(sides)];
     break;
   }
   displayRecipe();
   randomRecipeText.innerText = `${randomRecipe}!`
-};
+}
 
 function clearRecipe() {
   display(imgCookPot);
@@ -87,33 +86,33 @@ function displayRecipe() {
   hide(imgCookPot);
   display(randomRecipeIntro);
   display(btnClear);
-};
+}
 
 function displayRecipeBar() {
   recipeBar.classList.toggle("hidden");
-};
+}
 
 function displayUserRecipe() {
   displayRecipe();
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
-};
+}
 
 function validateUserRecipe() {
   var mealType = inputUserMealType.value;
-  switch(mealType.toLowerCase()) {
-    case "side":
+  switch (mealType.toLowerCase()) {
+  case "side":
     addUserRecipe();
     break;
-    case "main dish":
+  case "main dish":
     addUserRecipe();
     break;
-    case "dessert":
+  case "dessert":
     addUserRecipe();
     break;
-    default:
+  default:
     display(messageError);
     messageError.innerText = "Please enter: side, main dish, or dessert";
-  };
+  }
 }
 
 function addUserRecipe() {
@@ -126,10 +125,10 @@ function addUserRecipe() {
 
 function validateForm(e) {
   e.preventDefault();
-  if(inputUserRecipe.value === "" || inputUserMealType.value === "") {
-      display(messageError);
-      messageError.innerText = "input required";
+  if (inputUserRecipe.value === "" || inputUserMealType.value === "") {
+    display(messageError);
+    messageError.innerText = "input required";
   } else {
     validateUserRecipe();
   }
-};
+}
