@@ -56,10 +56,13 @@ function displayRandomDish() {
   switch(userChoice) {
     case "sides":
     randomRecipe = sides[randomIndex(sides)];
+    break;
     case "main-dishes":
     randomRecipe = mainDishes[randomIndex(sides)];
+    break;
     case "desserts":
     randomRecipe = desserts[randomIndex(sides)];
+    break;
   }
   displayRecipe();
 };
@@ -101,12 +104,34 @@ function addUserRecipe () {
   switch(mealType.toLowerCase()) {
     case "side":
     sides.push(userRecipe);
+    break;
     case "main dish":
     mainDishes.push(userRecipe);
+    break;
     case "dessert":
     desserts.push(userRecipe);
+    break;
   };
 }
+
+// function validateForm(e) {
+//   var mealType = inputUserMealType.value;
+//    if(mealType.toLowerCase() !== "side" && mealType.toLowerCase() !== "main dish" && mealType.toLowerCase() !== "dessert") {
+//      e.preventDefault();
+//      messageError.classList.remove("hidden");
+//      messageError.innerText = "Please enter: side, main dish, or dessert";
+//   } else if(inputUserRecipe.value === "") {
+//       e.preventDefault();
+//       messageError.classList.remove("hidden");
+//       messageError.innerText = "input required";
+//   } else {
+//     e.preventDefault();
+//     messageError.classList.add("hidden");
+//     displayUserRecipe();
+//     addUserRecipe();
+//     recipeBar.reset();
+//   };
+// };
 
 function validateForm(e) {
   var mealType = inputUserMealType.value;
