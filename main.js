@@ -29,10 +29,18 @@ btnClear.addEventListener("click", clearRecipe);
 formLogin.addEventListener("submit", login);
 recipeBar.addEventListener("dblclick", displayRecipeBar);
 
+function display(feature) {
+  feature.classList.remove("hidden");
+}
+
+function hide(feature) {
+  feature.classList.add("hidden");
+}
+
 function login(e) {
   e.preventDefault();
-  loginPage.classList.add("hidden");
-  mainPage.classList.remove("hidden");
+  hide(loginPage);
+  display(mainPage);
   displayWelcome();
 }
 
@@ -48,41 +56,37 @@ function randomIndex(recipies) {
 
 function displayRandomDish() {
   var userChoice;
-  for(var i = 0; i < inputMealType.length; i++) {
-    if(inputMealType[i].checked) {
-    userChoice = inputMealType[i].value;
+  inputMealType.forEach(meal => {
+    if(meal.checked) {
+    userChoice = meal.value;
   };
-};
-  if(userChoice === "sides") {
+});
+  switch(userChoice) {
+    case "sides":
     randomRecipe = sides[randomIndex(sides)];
-  }else if (userChoice === "main-dishes") {
+    break;
+    case "main-dishes":
     randomRecipe = mainDishes[randomIndex(sides)];
-  }else {
+    break;
+    case "desserts":
     randomRecipe = desserts[randomIndex(sides)];
+    break;
   }
   displayRecipe();
+  randomRecipeText.innerText = `${randomRecipe}!`
 };
 
 function clearRecipe() {
-  hideRecipe();
+  display(imgCookPot);
+  hide(randomRecipeIntro);
+  hide(btnClear);
   randomRecipeText.innerText = "";
 }
 
-function hideRecipe() {
-  imgCookPot.classList.remove("hidden");
-  randomRecipeIntro.classList.add("hidden");
-  btnClear.classList.add("hidden");
-}
-
-function showRecipe() {
-  imgCookPot.classList.add("hidden");
-  randomRecipeIntro.classList.remove("hidden");
-  btnClear.classList.remove("hidden");
-};
-
 function displayRecipe() {
-  showRecipe();
-  randomRecipeText.innerText = `${randomRecipe}!`
+  hide(imgCookPot);
+  display(randomRecipeIntro);
+  display(btnClear);
 };
 
 function displayRecipeBar() {
@@ -90,39 +94,42 @@ function displayRecipeBar() {
 };
 
 function displayUserRecipe() {
-  showRecipe();
+  displayRecipe();
   randomRecipeText.innerText = `${inputUserRecipe.value}`;
 };
 
-function addUserRecipe () {
+function validateUserRecipe() {
   var mealType = inputUserMealType.value;
+  switch(mealType.toLowerCase()) {
+    case "side":
+    addUserRecipe();
+    break;
+    case "main dish":
+    addUserRecipe();
+    break;
+    case "dessert":
+    addUserRecipe();
+    break;
+    default:
+    display(messageError);
+    messageError.innerText = "Please enter: side, main dish, or dessert";
+  };
+}
+
+function addUserRecipe() {
   var userRecipe = inputUserRecipe.value;
-  if(mealType.toLowerCase() === "side") {
-    sides.push(userRecipe);
-  };
-  if(mealType.toLowerCase() === "main dish") {
-    mainDishes.push(userRecipe);
-  };
-  if(mealType.toLowerCase() === "dessert") {
-    desserts.push(userRecipe);
-  };
-};
+  sides.push(userRecipe);
+  displayUserRecipe();
+  hide(messageError);
+  recipeBar.reset();
+}
 
 function validateForm(e) {
-  var mealType = inputUserMealType.value;
-   if(mealType.toLowerCase() !== "side" && mealType.toLowerCase() !== "main dish" && mealType.toLowerCase() !== "dessert") {
-     e.preventDefault();
-     messageError.classList.remove("hidden");
-     messageError.innerText = "Please enter: side, main dish, or dessert";
-  } else if(inputUserRecipe.value === "") {
-      e.preventDefault();
-      messageError.classList.remove("hidden");
+  e.preventDefault();
+  if(inputUserRecipe.value === "" || inputUserMealType.value === "") {
+      display(messageError);
       messageError.innerText = "input required";
   } else {
-    e.preventDefault();
-    messageError.classList.add("hidden");
-    displayUserRecipe();
-    addUserRecipe();
-    recipeBar.reset();
-  };
+    validateUserRecipe();
+  }
 };
